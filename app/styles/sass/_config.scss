@@ -1,0 +1,151 @@
+
+// USER VARIABLES SECTION
+$accent: #FFB525;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$pfdin: 'PFDinTextCompPro-Regular', sans-serif;
+$pfdin-light: 'PFDinTextCompPro-Light', sans-serif;
+$pfdin-medium: 'PFDinTextCompPro-Medium', sans-serif;
+$pfdin-bold: 'PFDinTextCompPro-Bold', sans-serif;
+
+
+// FONTS
+
+@font-face {
+    font-family: 'PFDinTextCompPro-Light';
+	src: local("PFDinTextCompPro-Light"), local("PFDinTextCompPro Light"), local("PF Din Text Comp Pro-Regular");
+    src: 
+        url('../fonts/PFDinTextCompPro-Light.woff2') format('woff2'),
+        url('../fonts/PFDinTextCompPro-Light.woff') format('woff'),
+        url('../fonts/PFDinTextCompPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PFDinTextCompPro-Regular';
+	src: local("PFDinTextCompPro-Regular"), local("PFDinTextCompPro Regular"), local("PF Din Text Comp Pro-Regular");
+    src: 
+        url('../fonts/PFDinTextCompPro-Regular.woff2') format('woff2'),
+        url('../fonts/PFDinTextCompPro-Regular.woff') format('woff'),
+        url('../fonts/PFDinTextCompPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PFDinTextCompPro-Medium';
+	src: local("PFDinTextCompPro-Medium"), local("PFDinTextCompPro Medium"), local("PF Din Text Comp Pro-Medium");
+    src: 
+        url('../fonts/PFDinTextCompPro-Medium.woff2') format('woff2'),
+        url('../fonts/PFDinTextCompPro-Medium.woff') format('woff'),
+        url('../fonts/PFDinTextCompPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PFDinTextCompPro-Bold';
+	src: local("PFDinTextCompPro-Bold"), local("PFDinTextCompPro Bold"), local("PF Din Text Comp Pro-Bold");
+    src: 
+        url('../fonts/PFDinTextCompPro-Bold.woff2') format('woff2'),
+        url('../fonts/PFDinTextCompPro-Bold.woff') format('woff'),
+        url('../fonts/PFDinTextCompPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// GENERAL DOCUMENT STYLES
+
+input, textarea {
+	outline: transparent;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+html, body { 
+	height:100%;
+	overflow-x: hidden;
+	font-size: 20px;
+	line-height: 24px;
+	font-family: $pfdin;
+	font-weight: 400;
+}
+
+body {
+	// position: relative;
+	color: #fff;
+	min-width: 320px;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+ul,  li {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+// Input number fix
+
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none
+}
+
+button {
+	outline: transparent;
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+.container {
+	max-width: 1170;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+h1 {
+    font-size: 60px;
+	line-height: 1.2;
+    font-family: $pfdin-bold;
+    font-weight: 700;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.overflow-hidden {
+	overflow: hidden;
+
+	body {
+		overflow: hidden
+	} 
+}
