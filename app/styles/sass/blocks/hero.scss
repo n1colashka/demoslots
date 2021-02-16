@@ -1,0 +1,135 @@
+.hero {
+    position: relative;
+
+    &__coins {
+    }
+
+    &__coin {
+        position: absolute;
+        right: 0;
+    }
+
+    &__coin--1 {
+    }
+
+    &__coin--2 {
+    }
+
+    &__coin--3 {
+    }
+
+    &__inner {
+    }
+
+    &__img {
+        position: absolute;
+        left: 130px;
+        bottom: 0;
+        
+    }
+
+    &__item--right {
+        .hero__content {
+            margin-left: 0;
+            margin-right: auto;
+        }
+        .hero__img {
+            left: auto;
+            right: 100px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 185px 0;
+        padding-bottom: 240px;
+
+        &.hero__item--3 {
+            .hero__img {
+                right: 302px;
+                bottom: 23px;
+            }
+        }
+    }
+    
+    &__logo {
+        position: relative;
+        margin-bottom: 5px;
+        padding-right: 25px;
+        width: 105px;
+        margin-left: -15px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            right: -362px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 362px;
+            height: 1px;
+            background-color: #fff;
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    &__content {
+        max-width: 600px;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: 120px;
+        line-height: 144px;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        font-size: 60px;
+        line-height: 72px;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-family: $pfdin-bold;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        position: relative;
+        font-family: $pfdin-bold;
+        font-weight: 700;
+        display: inline-block;
+        background-color: $accent;
+        border-radius: 50px;
+        margin-bottom: 25px;
+        padding: 13px 10px;
+        padding-left: 24px;
+        min-width: 230px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background: url('../images/dist/btn-icon.svg') center no-repeat;
+        }
+    }
+
+    .swiper-button-next {
+        right: 95px;
+    }
+
+    .swiper-button-prev {
+        left: 95px;
+    }
+}
+

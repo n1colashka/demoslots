@@ -7,6 +7,7 @@
     padding-right: 25px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
+    z-index: 8;
 
     &__mob-foot {
         display: none;
@@ -69,6 +70,10 @@
                 display: block;
             }
         }
+    }
+
+    &__logo {
+        margin-right: 30px;
     }
 
 
@@ -210,6 +215,7 @@
 .navigation {
     ul {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     li {

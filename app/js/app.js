@@ -17,6 +17,30 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    function initHeroSliders() {
+        var swiper = new Swiper('.hero__slider', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+
+    function initGamesSliders() {
+        var swiper = new Swiper('.games__slider', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+
     initLanguages();
     initMenu();
+    initHeroSliders();
+    initGamesSliders();
 })

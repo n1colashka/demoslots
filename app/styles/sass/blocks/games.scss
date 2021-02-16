@@ -1,0 +1,84 @@
+.games {
+    position: relative;
+    z-index: 8;
+    top: -200px;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        line-height: 36px;
+
+        img {
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__slider {
+        padding-top: 40px;
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: "";
+            right: 80px;
+            top: -40px;
+            height: 230px;
+            width: 40px;
+            background-color: #fff;
+            opacity: 0.2;
+            transform: rotate(35deg) skewX(10deg);
+        }
+
+        
+        &::after {
+            position: absolute;
+            content: "";
+            right: 40px;
+            top: -40px;
+            height: 230px;
+            width: 20px;
+            background-color: #fff;
+            opacity: 0.2;
+            transform: rotate(35deg) skewX(10deg);
+        }
+        
+        img {
+            display: flex;
+            border-radius: 18px;
+            width: 100%;
+        }
+    }
+
+    .swiper-button-next {
+        right: -5px;
+        left: auto;
+        top: 12px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 1px;
+            background-color: rgba(#fff, .5);
+            top: 7px;
+            left: -9px;
+        }
+    }
+
+    .swiper-button-prev {
+        right: 40px;
+        top: 12px;
+        left: auto;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 20px;
+    }
+}

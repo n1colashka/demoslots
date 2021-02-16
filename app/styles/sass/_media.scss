@@ -1,6 +1,13 @@
 @media (min-width: 1025px) {
    // Hover section
 
+    .swiper-button-next, .swiper-button-prev {
+        &:hover {
+            color: $accent;
+            opacity: 1;
+        }
+    }
+
     .navigation a:hover {
         opacity: 1;
         &::after {
