@@ -89,9 +89,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function initProvidersSlider() {
+        var swiper = new Swiper('.providers__slider', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.providers__next',
+                prevEl: '.providers__prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                600: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+                
+            }
+        });
+    }
+
+    function initScrollToTop() {
+        function scrollToTop() {
+            window.scroll({top: 0, left: 0, behavior: 'smooth'});
+        }
+
+        const scrollArrow = document.querySelector('.footer__arrow');
+
+        scrollArrow.addEventListener('click', scrollToTop);
+    }
+    
     initLanguages();
     initMenu();
     initHeroSlider();
     initGamesSlider();
     initPartnersSlider();
+    initProvidersSlider();
+    initScrollToTop();
 })
