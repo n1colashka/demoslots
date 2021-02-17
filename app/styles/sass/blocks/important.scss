@@ -1,0 +1,59 @@
+.important {
+    position: relative;
+    z-index: 3;
+    background-color: $accent;
+    padding: 17px 0;
+    margin-top: -45px;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        font-family: $pfdin-bold;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1;
+        flex: 1 0 32%;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        position: relative;
+        margin-right: 13px;
+        flex-shrink: 0;
+        
+        &::before {
+            position: absolute;
+            content: "";
+            left: -14px;
+            top: -7px;
+            width: 62px;
+            height: 62px;
+            opacity: .2;
+            background: url('../images/dist/important-icon.svg') center / cover no-repeat;
+        }
+    }
+
+    &__line {
+        margin: 0 35px;
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+        flex-shrink: 1;
+    }
+
+    &__text {
+        font-size: 30px;
+        line-height: 36px;
+        flex: 1 0 35%;
+
+        strong {
+            font-family: $pfdin-bold;
+            font-weight: 700;
+        }
+    }
+}

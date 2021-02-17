@@ -1,12 +1,6 @@
 .hero {
     position: relative;
 
-    &__coins {
-    }
-
-    &__coin {
-    
-    }
 
     &__coin--1 {
         top: 176px;
@@ -23,9 +17,6 @@
         right: -70px;
     }
 
-    &__inner {
-    }
-
     .swiper-pagination {
         display: none;
         bottom: 180px;
@@ -40,7 +31,7 @@
 
     &__item--right {
         .hero__content {
-            margin-left: 0;
+            margin-left: 30px;
             margin-right: auto;
         }
         .hero__img {
