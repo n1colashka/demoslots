@@ -55,6 +55,13 @@
 }
 
 @media (max-width: 1400px) {
+    .partners {
+        &__bg {
+            img {
+                width: 200px;
+            }
+        }
+    }
     .circle-gradient {
         width: 200px;
         height: 200px;
@@ -155,6 +162,13 @@
 }
 
 @media (max-width: 1024px) {
+    .partners {
+        padding-top: 40px;
+        padding-bottom: 25px;
+        &__bg {
+            display: none;
+        }
+    }
     .coin--1 {
         width: 27px;
     }
@@ -313,6 +327,28 @@
 }
 
 @media (max-width: 768px) {
+    .partners {
+        &__slider {
+            height: auto;
+            max-height: 170px;
+            padding-bottom: 40px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &__img {
+            height: 120px;
+
+            &:last-child {
+                display: none;
+            }
+        }
+        .swiper-pagination {
+            display: block;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
+        }
+    }
     .why {
         padding-top: 30px;
         &__content-text {

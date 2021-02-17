@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    function initHeroSliders() {
+    function initHeroSlider() {
         var swiper = new Swiper('.hero__slider', {
             loop: true,
             navigation: {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function initGamesSliders() {
+    function initGamesSlider() {
         var swiper = new Swiper('.games__slider', {
             loop: true,
             slidesPerView: 3,
@@ -56,15 +56,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 768: {
                     slidesPerView: 3,
                 },
-                769: {
+                
+            }
+        });
+    }
+
+    function initPartnersSlider() {
+        var swiper = new Swiper('.partners__slider', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.partners__next',
+                prevEl: '.partners__prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                480: {
+                    slidesPerView: 2,
+                },
+                768: {
                     slidesPerView: 3,
                 },
+                
             }
         });
     }
 
     initLanguages();
     initMenu();
-    initHeroSliders();
-    initGamesSliders();
+    initHeroSlider();
+    initGamesSlider();
+    initPartnersSlider();
 })
