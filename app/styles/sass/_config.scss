@@ -160,4 +160,28 @@ a {
     outline: transparent;
     transition: .2s ease;
     opacity: .5;
+
+    
+    &:focus, &:active {
+        color: $accent;
+        opacity: 1;
+    }
+}
+
+
+.swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    background-color: #fff;
+    opacity: .3;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $accent;
+    opacity: 1;
+}
+
+.coin {
+    position: absolute;
+    z-index: 7;
 }

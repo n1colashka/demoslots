@@ -7,7 +7,7 @@
     padding-right: 25px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-    z-index: 8;
+    z-index: 9;
 
     &__mob-foot {
         display: none;
@@ -138,7 +138,7 @@
             left: 0;
             top: -15px;
             background-color: $accent;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
             border-radius: 4px;
         }
 

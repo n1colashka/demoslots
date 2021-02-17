@@ -5,20 +5,30 @@
     }
 
     &__coin {
-        position: absolute;
-        right: 0;
+    
     }
 
     &__coin--1 {
+        top: 176px;
+        right: 135px;
     }
 
     &__coin--2 {
+        top: 101px;
+        right: 40px;
     }
 
     &__coin--3 {
+        top: 140px;
+        right: -70px;
     }
 
     &__inner {
+    }
+
+    .swiper-pagination {
+        display: none;
+        bottom: 180px;
     }
 
     &__img {
@@ -43,6 +53,7 @@
         position: relative;
         padding: 185px 0;
         padding-bottom: 240px;
+        overflow: hidden;
 
         &.hero__item--3 {
             .hero__img {
@@ -76,6 +87,8 @@
     }
     
     &__content {
+        position: relative;
+        z-index: 5;
         max-width: 600px;
         margin-left: auto;
     }

@@ -29,8 +29,78 @@
     
 }
 
+@media (max-width: 1500px) {
+    .hero {
+        &__img {
+            left: 0;
+        }
+    }
+    .hero__item--right .hero__img {
+        right: 0;
+    }
+    .hero__item.hero__item--3 .hero__img {
+        right: 55px;
+    }
+    .games {
+        &__coin--1 {
+            left: 100px;
+        }
+        &__coin--2 {
+            left: -15px;
+        }
+        &__coin--3 {
+            left: -55px;
+        }
+    }
+}
 
 @media (max-width: 1400px) {
+    .games {
+        &__coin--1 {
+            width: 27px;
+            filter: blur(3px);
+            left: 64px;
+            bottom: -100px;
+            top: auto;
+        }
+        &__coin--2 {
+            width: 38px;
+            left: 0;
+            bottom: -107px;
+            top: auto;
+            transform: rotate(200deg);
+        }
+        &__coin--3 {
+            width: 74px;
+            filter: blur(3px);
+            left: -25px;
+            bottom: -200px;
+            top: auto;
+        }
+    }
+    .hero {
+        &__img {
+            // opacity: 0.5;
+            filter: brightness(0.4);
+        }
+        &__item.hero__item--3 .hero__img {
+            right: 0;
+        }
+        &__title {
+            font-size: 100px;
+            line-height: 122px;
+        }
+        &__subtitle {
+            font-size: 50px;
+            line-height: 66px;
+            margin-bottom: 5px;
+        }
+        &__text {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 25px;
+        }
+    }
     .header {
         padding-left: 0;
         padding-right: 15px;
@@ -58,8 +128,46 @@
 }
 
 @media (max-width: 1024px) {
+    .coin--1 {
+        width: 27px;
+    }
+    .coin--2 {
+        width: 38px;
+    }
+    .coin--3 {
+        width: 73px;
+    }
+    .hero__coin--1 {
+        top: auto;
+        bottom: 245px;
+        right: 17px;
+        transform: rotate(280deg);
+        filter: blur(3px);
+    }
+    .hero__coin--2 {
+        top: auto;
+        bottom: 206px;
+        right: 0;
+        transform: rotate(109deg);
+    }
+    .hero__coin--3 {
+        top: auto;
+        bottom: 153px;
+        transform: rotate(283deg);
+        right: 41px;
+        filter: blur(3px);
+    }
+    h1 {
+        font-size: 35px;
+        line-height: 43px;
+    } 
+    .hero__logo::after {
+        width: 170px;
+        right: -170px;
+    }
+    
     .header {
-        padding: 15px 0;
+        padding: 8px 0;
 
         &__inner {
             position: relative;
@@ -178,10 +286,67 @@
 }
 
 @media (max-width: 768px) {
+    .games {
+        top: -132px;
+        &__slider {
+            padding-bottom: 40px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 1;
 
+            img {
+                margin-right: 15px;
+            }
+        }
+        .swiper-pagination {
+            display: block;
+            bottom: 5px;
+        }
+    }
+    .hero {
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+        .swiper-pagination {
+            display: block;
+        }
+        &__item {
+            padding: 140px 0;
+        }
+        &__img {
+            bottom: auto;
+            top: 207px;
+        }
+        &__title {
+            font-size: 56px;
+            line-height: 62px;
+        }
+        &__subtitle {
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+    }
+    .hero .swiper-button-prev {
+        left: 10px;
+    }
+    .hero .swiper-button-next {
+        right: 10px;
+    }
 }
 
 
 @media (max-width: 480px) {
-
+    .hero {
+        &__img {
+            width: 500px;
+            left: -33px;
+        }
+    }
 }
