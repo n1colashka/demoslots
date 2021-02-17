@@ -154,6 +154,14 @@ a {
 	} 
 }
 
+.circle-gradient {
+    position: absolute;
+    width: 532px;
+    height: 532px;
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(#FFB525, .2) 0%, rgba(255, 181, 37, 0) 100%);
+}
+
 
 .swiper-button-next, .swiper-button-prev {
     color: #fff;
