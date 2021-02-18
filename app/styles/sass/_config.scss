@@ -196,3 +196,10 @@ a {
 .swiper-button-prev:after, .swiper-button-next:after {
     font-size: 30px;
 }
+
+html, body {
+    touch-action: none;
+-ms-touch-action: none;
+-webkit-overflow-scrolling: touch;
+    height: 100%;
+}
