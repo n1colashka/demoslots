@@ -478,6 +478,10 @@
 }
 
 @media (max-width: 768px) {
+    .modal__container {
+        margin: 200px 0;
+        padding-bottom: 50px;
+    }
     .hero__logo {
         display: none;
     }
