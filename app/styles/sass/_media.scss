@@ -478,6 +478,9 @@
 }
 
 @media (max-width: 768px) {
+    .modal__content {
+        max-height: 80vh;
+    }
     #modal-2 {
         .modal__container {
             padding-top: 85px;
