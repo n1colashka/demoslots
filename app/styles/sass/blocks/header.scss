@@ -111,7 +111,14 @@
             margin-bottom: 2px;
             transition: .3s ease;
             
-            &:first-child {
+            
+            
+        }
+    }
+
+    &__right {
+        .header__login-links {
+            a:first-child {
                 color: $accent;
                 font-family: $pfdin-bold;
                 font-weight: 700;
@@ -126,7 +133,6 @@
                     transition: .3s ease;
                 }
             }
-            
         }
     }
 
@@ -198,6 +204,7 @@
         ul {
             position: absolute;
             top: 100%;
+            z-index: 6;
             left: -10px;
             display: none;
             padding-right: 20px;
