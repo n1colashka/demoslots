@@ -217,6 +217,12 @@
 }
 
 @media (max-width: 1024px) {
+    .form {
+        width: 100%;
+        form {
+            width: 100%;
+        }
+    }
     #modal-2 {
         .modal__container {
           padding-right: 0;
