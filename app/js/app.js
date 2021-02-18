@@ -134,6 +134,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('[data-micromodal-trigger]').forEach(function(item){
             item.addEventListener('click', function(e) {
                 e.preventDefault();
+
+                document.querySelector('.header__inner').classList.remove('active');
+                document.querySelector('.header__menu-btn').classList.remove('active');
+                document.querySelector('html').classList.remove('overflow-hidden');
             })
         })
         document.querySelector('.modal__registration').addEventListener('click', function() {
