@@ -1,0 +1,81 @@
+
+.form {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        background: #151424;
+        padding: 20px 25px;
+    }
+
+    &__logo {
+        position: absolute;
+        right: -15px;
+        top: -31px;
+    }
+
+    &__title {
+        margin-bottom: 18px;
+        max-width: 170px;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: $pfdin-bold;
+        line-height: 1;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        position: relative;
+        cursor: pointer;
+        
+        input {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background: #2C2B3A;
+            border-radius: 50px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            font-family: $pfdin-bold;
+            border: 1px solid transparent;
+            color: #fff;
+            transition: .2s;
+            &::placeholder {
+                opacity: 0.5;
+                font-weight: 400;
+                font-family: $pfdin;
+                color: #fff;
+            }
+
+            &:focus, &:active {
+                border: 1px solid $accent;
+            }
+        }
+    }
+
+    &__captcha {
+        margin-bottom: 20px;
+    }
+
+    .form__btn {
+        border: none;
+        text-align: left;
+        margin-bottom: 20px;
+        color: #fff;
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+.password-eye {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+}

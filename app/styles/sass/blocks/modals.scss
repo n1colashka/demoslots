@@ -1,0 +1,143 @@
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal {
+    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  }
+  
+  .modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 14;
+    justify-content: center;
+    align-items: center;
+    background: rgba(33, 51, 96, 0.8);
+    backdrop-filter: blur(4px);
+  }
+  
+  .modal__container {
+    max-width: 940px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-right: 50px;
+    margin: 160px 0;
+  }
+  
+  
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    z-index: 10;
+  }
+  
+  .modal__wrapper {
+      display: flex;
+  }
+  
+  .modal__content {
+    box-shadow: 0px 4px 40px rgba(#FFFFFF, .5);
+    border-radius: 15px;
+    overflow-y: auto;
+    border-radius: 15px;
+
+    max-height: 90vh;
+  }
+  #modal-2 {
+      .modal__container {
+        padding-top: 32px;
+        padding-right: 38px;
+      }
+  }
+
+  .modal {
+
+    &__img {
+        border-radius: 15px 0 0 15px;
+
+        img {
+            display: flex;
+            border-radius: 15px 0 0 15px;
+        }
+    }
+
+    &__foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        line-height: 21px;
+        padding: 10px 20px;
+        border-radius: 0 0 15px 0;
+        background-color: #4573DF;
+        font-family: $pfdin;
+        font-weight: 400;
+        margin-top: auto;
+
+        a {
+            text-decoration: underline;
+            font-weight: 700;
+            font-family: $pfdin-bold;
+        }
+    }
+}
+
+  /**************************\
+    Demo Animation Style
+  \**************************/
+  @keyframes mmfadeIn {
+      from { opacity: 0; }
+        to { opacity: 1; }
+  }
+  
+  @keyframes mmfadeOut {
+      from { opacity: 1; }
+        to { opacity: 0; }
+  }
+  
+  @keyframes mmslideIn {
+    from { transform: translateY(15%); }
+      to { transform: translateY(0); }
+  }
+  
+  @keyframes mmslideOut {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10%); }
+  }
+  
+  .micromodal-slide {
+    display: none;
+  }
+  
+  .micromodal-slide.is-open {
+    display: block;
+  }
+  
+  .micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  .micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  .micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+  
+  .micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  .micromodal-slide .modal__container,
+  .micromodal-slide .modal__overlay {
+    will-change: transform;
+  }

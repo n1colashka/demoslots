@@ -130,6 +130,28 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollArrow.addEventListener('click', scrollToTop);
     }
     
+    function initModals() {
+        document.querySelectorAll('[data-micromodal-trigger]').forEach(function(item){
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+            })
+        })
+        document.querySelector('.modal__registration').addEventListener('click', function() {
+            MicroModal.close('modal-2');
+            MicroModal.show('modal-1');
+        })
+        document.querySelector('.modal__sign').addEventListener('click', function() {
+            MicroModal.close('modal-1');
+            MicroModal.show('modal-2');
+        })
+
+        MicroModal.init({
+            onShow: modal => document.querySelector('html').classList.add('overflow-hidden'), // [1]
+            onClose: modal => document.querySelector('html').classList.remove('overflow-hidden'), // [2]
+        });
+    }
+
+    
     initLanguages();
     initMenu();
     initHeroSlider();
@@ -137,4 +159,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initPartnersSlider();
     initProvidersSlider();
     initScrollToTop();
+    initModals();
 })

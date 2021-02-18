@@ -1,5 +1,8 @@
 @media (min-width: 1025px) {
    // Hover section
+    .form__item input:hover {
+        border-color: $accent;
+    }
 
     .footer__socials li:hover {
         background-color: #fff;
@@ -214,6 +217,19 @@
 }
 
 @media (max-width: 1024px) {
+    #modal-2 {
+        .modal__container {
+          padding-right: 0;
+        }
+    }
+    .modal {
+        &__img {
+            display: none;
+        }
+        &__container {
+            padding-right: 0;
+        }
+    }
     
     .info {
         &__inner {
@@ -451,6 +467,7 @@
         }
     }
 }
+
 
 @media (max-width: 900px) {
     .info {
