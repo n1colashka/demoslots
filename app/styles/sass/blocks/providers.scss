@@ -59,12 +59,13 @@
         background-color: #fff;
         padding: 4px 22px;
         font-size: 20px;
-        line-height: 25px;
+        line-height: 1;
         font-family: $pfdin-bold;
         font-weight: 700;
         width: 100%;
         transition: .2s ease;
         color: #000;
+        border-radius: 0 5px 5px 0;
     }
 
     &__slider {
@@ -77,6 +78,7 @@
         margin-bottom: 30px;
         img {
             height: 38px;
+            border-radius: 5px 0 0 5px;
         }
     }
 

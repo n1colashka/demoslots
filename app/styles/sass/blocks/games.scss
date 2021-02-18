@@ -8,6 +8,7 @@
         align-items: center;
         font-size: 30px;
         line-height: 36px;
+        margin-bottom: -10px;
 
         img {
             margin-right: 20px;
@@ -40,10 +41,10 @@
         &::after {
             position: absolute;
             content: "";
-            right: 40px;
+            right: 45px;
             top: -40px;
             height: 230px;
-            width: 20px;
+            width: 15px;
             background-color: #fff;
             opacity: 0.2;
             transform: rotate(35deg) skewX(10deg);

@@ -192,3 +192,7 @@ a {
     position: absolute;
     z-index: 7;
 }
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 30px;
+}
