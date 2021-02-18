@@ -147,7 +147,9 @@ a {
 
 .overflow-hidden {
 	overflow: hidden;
-
+    touch-action: none;
+-ms-touch-action: none;
+-webkit-overflow-scrolling: touch;
 	body {
 		overflow: hidden
 	} 
@@ -198,8 +200,6 @@ a {
 }
 
 html, body {
-    touch-action: none;
--ms-touch-action: none;
--webkit-overflow-scrolling: touch;
+
     height: 100%;
 }
