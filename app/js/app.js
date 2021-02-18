@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     function initLanguages() {
-        const languages = document.querySelector('.header__languages');
+        if (window.innerWidth > 1024) {
+            const languages = document.querySelector('.header__languages');
 
-        languages.addEventListener('click', function() {
-            languages.classList.toggle('active');
-        })
+            languages.addEventListener('click', function() {
+                languages.classList.toggle('active');
+            })
+        }
     }
 
     function initMenu() {
@@ -121,13 +123,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initScrollToTop() {
-        function scrollToTop() {
-            window.scroll({top: 0, left: 0, behavior: 'smooth'});
-        }
-
         const scrollArrow = document.querySelector('.footer__arrow');
+        let intervalId = 0;
+        function scrollStep() {
+            if (window.pageYOffset === 0) {
+                clearInterval(intervalId);
+            }
+            window.scroll(0, window.pageYOffset - 50);
 
+        }
+        
+        function scrollToTop() {
+            document.querySelector('html').style.height = 'auto';
+            document.body.style.height = 'auto';
+            intervalId = setInterval(scrollStep, 16.66);
+            
+            setTimeout(function() {
+                document.querySelector('html').style.height = '';
+                document.body.style.height = '';
+            }, 300)
+        }
         scrollArrow.addEventListener('click', scrollToTop);
+        
     }
     
     function initModals() {
@@ -162,6 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initGamesSlider();
     initPartnersSlider();
     initProvidersSlider();
-    initScrollToTop();
     initModals();
+    initScrollToTop();
 })
