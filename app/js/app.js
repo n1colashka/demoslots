@@ -28,20 +28,22 @@ document.addEventListener('DOMContentLoaded', function() {
     function initMenu() {
         const menuBtn = document.querySelector('.header__menu-btn');
         const menu = document.querySelector('.header__inner');
-        const navigationLinks = document.querySelectorAll('.header__navigation li');
+        const navigationLinks = document.querySelectorAll('.header__navigation li a');
         const html = document.querySelector('html');
         menuBtn.addEventListener('click', function() {
             menu.classList.toggle('active');
             menuBtn.classList.toggle('active');
             html.classList.toggle('overflow-hidden');
         })
-        navigationLinks.forEach(item => {
+        if (window.innerWidth < 1025) {
+            navigationLinks.forEach(item => {
             item.addEventListener('click', () => {
                 menu.classList.remove('active');
                 menuBtn.classList.remove('active');
                 html.classList.remove('overflow-hidden');
             })
         })
+        }
     }
 
     function initHeroSlider() {
