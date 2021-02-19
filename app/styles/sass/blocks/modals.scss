@@ -21,10 +21,9 @@
   }
   
   .modal__container {
-    max-width: 940px;
+    max-width: 990px;
     box-sizing: border-box;
-    padding-top: 40px;
-    padding-right: 50px;
+    padding: 40px 50px;
     margin: 160px 0;
     position: relative;
     overflow: auto;
@@ -55,20 +54,24 @@
     width: 100%;
   }
   #modal-2 {
+    .modal__content {
+      box-shadow: 0px 0px 30px rgba(69, 115, 223, 0.5);
+    }
       .modal__container {
         padding-top: 32px;
         padding-right: 38px;
+        padding-left: 38px;
       }
   }
 
   .modal {
 
     &__img {
-        border-radius: 15px 0 0 15px;
+        border-radius: 16px 0 0 16px;
 
         img {
             display: flex;
-            border-radius: 15px 0 0 15px;
+            border-radius: 16px 0 0 16px;
         }
     }
 

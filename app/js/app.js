@@ -10,14 +10,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function initTogglePassword() {
+        const passwordToggleBtn = document.querySelector('.password-eye');
+        function togglePassword() {
+            var x = document.querySelector(".form__password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        passwordToggleBtn.addEventListener('click', togglePassword);
+    }
+    
+    initTogglePassword();
+
     function initMenu() {
         const menuBtn = document.querySelector('.header__menu-btn');
         const menu = document.querySelector('.header__inner');
+        const navigationLinks = document.querySelectorAll('.header__navigation li');
         const html = document.querySelector('html');
         menuBtn.addEventListener('click', function() {
             menu.classList.toggle('active');
             menuBtn.classList.toggle('active');
             html.classList.toggle('overflow-hidden');
+        })
+        navigationLinks.forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.remove('active');
+                menuBtn.classList.remove('active');
+                html.classList.remove('overflow-hidden');
+            })
         })
     }
 

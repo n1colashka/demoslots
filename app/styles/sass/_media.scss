@@ -235,6 +235,9 @@
 }
 
 @media (max-width: 1024px) {
+    .hero__content {
+        margin-left: 0;
+    }
     .header {
         &__languages {
             & > span, & > ul {
@@ -259,15 +262,23 @@
     }
     #modal-2 {
         .modal__container {
-          padding-right: 0;
+            padding: 30px;
         }
     }
     .modal {
+        &__overlay {
+            padding: 30px 0;
+        }
         &__img {
             display: none;
         }
+        &__close {
+            right: 25px;
+        }
         &__container {
-            padding-right: 0;
+            // padding-right: 0;
+            padding: 30px;
+            top: 30px;
         }
         &__content {
             box-shadow: 0px 0px 30px rgba(69, 115, 223, 0.5);
@@ -547,7 +558,7 @@
     }
     .modal__close {
         top: 85px;
-        right: 0px;
+        // right: 0px;
     }
     .hero__logo {
         display: none;
