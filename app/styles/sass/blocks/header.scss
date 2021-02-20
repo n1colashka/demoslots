@@ -179,43 +179,12 @@
         cursor: pointer;
 
         select {
-            display: none;
-        }
-        
-        & > span {
-            position: relative;
-            padding-right: 20px;
-            &::after {
-                position: absolute;
-                content: "";
-                right: 0;
-                top: 50%;
-                width: 12px;
-                height: 8px;
-                transform: translateY(-50%);
-                background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8402 0.88701C11.6273 0.674028 11.2819 0.673992 11.0689 0.887046L6.00013 5.95588L0.931145 0.88701C0.718164 0.674028 0.372782 0.673992 0.159764 0.887046C-0.0532545 1.10006 -0.0532545 1.44541 0.159764 1.65843L5.61445 7.11297C5.71674 7.21526 5.85547 7.27272 6.00013 7.27272C6.14478 7.27272 6.28355 7.21523 6.3858 7.11294L11.8402 1.65839C12.0533 1.44541 12.0533 1.10003 11.8402 0.88701Z' fill='white'/%3E%3C/svg%3E%0A");
-            }
-        }
-        
-        ul {
-            position: absolute;
-            top: 100%;
-            z-index: 6;
-            left: -10px;
-            display: none;
-            padding-right: 20px;
-            padding-left: 10px;
-            background: rgba(0,0,0,.5);
-            backdrop-filter: blur(10px);
-            li {
-                padding: 5px 0;
-                margin-bottom: 5px;
-            }
-        }
-
-        &.active {
-            ul {
-                display: block;
+            display: block;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            option {
+                background-color: #000;
             }
         }
     }

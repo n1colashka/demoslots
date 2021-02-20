@@ -1,15 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    function initLanguages() {
-        if (window.innerWidth > 1024) {
-            const languages = document.querySelector('.header__languages');
-
-            languages.addEventListener('click', function() {
-                languages.classList.toggle('active');
-            })
-        }
-    }
-
     function initTogglePassword() {
         const passwordToggleBtn = document.querySelector('.password-eye');
         function togglePassword() {
@@ -35,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             menuBtn.classList.toggle('active');
             html.classList.toggle('overflow-hidden');
         })
-        if (window.innerWidth < 1025) {
+        if (document.documentElement.clientWidth < 1025) {
             navigationLinks.forEach(item => {
             item.addEventListener('click', () => {
                 menu.classList.remove('active');
@@ -198,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    initLanguages();
     initMenu();
     initHeroSlider();
     initGamesSlider();

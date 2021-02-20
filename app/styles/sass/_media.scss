@@ -238,22 +238,6 @@
     .hero__content {
         margin-left: 0;
     }
-    .header {
-        &__languages {
-            & > span, & > ul {
-                display: none;
-            }
-            select {
-                display: block;
-                background-color: transparent;
-                color: #fff;
-                border: none;
-                option {
-                    background-color: #000;
-                }
-            }
-        }
-    }
     .form {
         width: 100%;
         form {
