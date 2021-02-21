@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function initHeroSlider() {
         var swiper = new Swiper('.hero__slider', {
             loop: true,
+            allowTouchMove: false,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
+            allowTouchMove: false,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -83,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
+            allowTouchMove: false,
             navigation: {
                 nextEl: '.partners__next',
                 prevEl: '.partners__prev',
@@ -111,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
+            allowTouchMove: false,
             navigation: {
                 nextEl: '.providers__next',
                 prevEl: '.providers__prev',
@@ -149,16 +153,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         function scrollToTop() {
-            document.querySelector('html').style.height = 'auto';
-            document.body.style.height = 'auto';
+            // document.querySelector('html').style.height = 'auto';
+            // document.body.style.height = 'auto';
             intervalId = setInterval(scrollStep, 16.66);
             
             setTimeout(function() {
-                document.querySelector('html').style.height = '';
-                document.body.style.height = '';
+                // document.querySelector('html').style.height = '';
+                // document.body.style.height = '';
             }, 300)
         }
         scrollArrow.addEventListener('click', scrollToTop);
+
+        document.querySelectorAll('a[href^="#"').forEach(link => {
+
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // document.querySelector('html').style.height = 'auto';
+                // document.body.style.height = 'auto';
+
+                let href = this.getAttribute('href').substring(1);
+        
+                const scrollTarget = document.getElementById(href);
+                const topOffset = 100;
+                // const topOffset = 0; // если не нужен отступ сверху 
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+        
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                // setTimeout(function() {
+                //     document.querySelector('html').style.height = '';
+                //     document.body.style.height = '';
+                // }, 300)
+            });
+        });
         
     }
     
@@ -187,6 +218,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function initScrollToBlock() {
+        const anchorLinks = document.querySelectorAll('.anchor');
+        anchorLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                link.scrollIntoView();
+            })
+        })
+    }
     
     initMenu();
     initHeroSlider();
@@ -195,4 +234,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initProvidersSlider();
     initModals();
     initScrollToTop();
+    initScrollToBlock();
 })

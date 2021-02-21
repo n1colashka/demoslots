@@ -180,6 +180,8 @@
 
         select {
             display: block;
+            outline: none;
+            cursor: pointer;
             background-color: transparent;
             color: #fff;
             border: none;
