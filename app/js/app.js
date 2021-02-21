@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let href = this.getAttribute('href').substring(1);
         
                 const scrollTarget = document.getElementById(href);
-                const topOffset = 80;
+                const topOffset = 120;
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
         
