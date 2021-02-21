@@ -142,54 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initScrollToTop() {
-        const scrollArrow = document.querySelector('.footer__arrow');
-        let intervalId = 0;
-        function scrollStep() {
-            if (window.pageYOffset === 0) {
-                clearInterval(intervalId);
-            }
-            window.scroll(0, window.pageYOffset - 50);
-
-        }
-        
-        function scrollToTop() {
-            // document.querySelector('html').style.height = 'auto';
-            // document.body.style.height = 'auto';
-            intervalId = setInterval(scrollStep, 16.66);
-            
-            setTimeout(function() {
-                // document.querySelector('html').style.height = '';
-                // document.body.style.height = '';
-            }, 300)
-        }
-        scrollArrow.addEventListener('click', scrollToTop);
-
-        document.querySelectorAll('a[href^="#"').forEach(link => {
-
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                // document.querySelector('html').style.height = 'auto';
-                // document.body.style.height = 'auto';
-
-                let href = this.getAttribute('href').substring(1);
-        
-                const scrollTarget = document.getElementById(href);
-                const topOffset = 100;
-                // const topOffset = 0; // если не нужен отступ сверху 
-                const elementPosition = scrollTarget.getBoundingClientRect().top;
-                const offsetPosition = elementPosition - topOffset;
-        
-                window.scrollBy({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-                // setTimeout(function() {
-                //     document.querySelector('html').style.height = '';
-                //     document.body.style.height = '';
-                // }, 300)
-            });
-        });
+        // const scrollArrow = document.querySelector('.footer__arrow');
+        // scrollArrow.addEventListener('click', function() {
+        //     window.scrollBy({
+        //         top: 500,
+        //         behavior: 'smooth'
+        //     });
+        // });
         
     }
     
@@ -219,12 +178,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initScrollToBlock() {
-        const anchorLinks = document.querySelectorAll('.anchor');
-        anchorLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                link.scrollIntoView();
-            })
-        })
+        document.querySelectorAll('a[href^="#"').forEach(link => {
+
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                let href = this.getAttribute('href').substring(1);
+        
+                const scrollTarget = document.getElementById(href);
+                const topOffset = 100;
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+        
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
     }
     
     initMenu();
