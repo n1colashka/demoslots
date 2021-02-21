@@ -154,10 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.modal__registration').addEventListener('click', function() {
             MicroModal.close('modal-2');
             MicroModal.show('modal-1');
+            document.querySelector('html').classList.add('overflow-hidden');
         })
         document.querySelector('.modal__sign').addEventListener('click', function() {
             MicroModal.close('modal-1');
             MicroModal.show('modal-2');
+            document.querySelector('html').classList.add('overflow-hidden');
         })
 
         MicroModal.init({
@@ -175,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let href = this.getAttribute('href').substring(1);
         
                 const scrollTarget = document.getElementById(href);
-                const topOffset = 120;
+                const topOffset = 100;
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
         
