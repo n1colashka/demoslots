@@ -140,17 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    function initScrollToTop() {
-        // const scrollArrow = document.querySelector('.footer__arrow');
-        // scrollArrow.addEventListener('click', function() {
-        //     window.scrollBy({
-        //         top: 500,
-        //         behavior: 'smooth'
-        //     });
-        // });
-        
-    }
     
     function initModals() {
         document.querySelectorAll('[data-micromodal-trigger]').forEach(function(item){
@@ -186,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let href = this.getAttribute('href').substring(1);
         
                 const scrollTarget = document.getElementById(href);
-                const topOffset = 100;
+                const topOffset = 80;
                 const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition - topOffset;
         
@@ -204,6 +193,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initPartnersSlider();
     initProvidersSlider();
     initModals();
-    initScrollToTop();
     initScrollToBlock();
 })
