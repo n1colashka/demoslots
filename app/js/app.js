@@ -48,6 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            breakpoints: {
+                320: {
+                    allowTouchMove: true,
+                    slidesPerView: 1,
+                },
+                768: {
+                    allowTouchMove: false,
+                },
+                
+            }
         });
     }
 
@@ -56,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
-            allowTouchMove: false,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -68,12 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
             breakpoints: {
                 320: {
                     slidesPerView: 1,
+                    allowTouchMove: true,
                 },
                 480: {
                     slidesPerView: 2,
+                    allowTouchMove: true,
                 },
                 768: {
                     slidesPerView: 3,
+                    allowTouchMove: false,
                 },
                 
             }
@@ -85,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
-            allowTouchMove: false,
             navigation: {
                 nextEl: '.partners__next',
                 prevEl: '.partners__prev',
@@ -96,12 +107,14 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             breakpoints: {
                 320: {
+                    allowTouchMove: true,
                     slidesPerView: 1,
                 },
                 480: {
                     slidesPerView: 2,
                 },
                 768: {
+                    allowTouchMove: false,
                     slidesPerView: 3,
                 },
                 
@@ -114,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
-            allowTouchMove: false,
             navigation: {
                 nextEl: '.providers__next',
                 prevEl: '.providers__prev',
@@ -125,10 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             breakpoints: {
                 320: {
+                    allowTouchMove: true,
                     slidesPerView: 1,
                 },
                 600: {
                     slidesPerView: 2,
+                    allowTouchMove: false,
                 },
                 768: {
                     slidesPerView: 3,
@@ -148,18 +162,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 document.querySelector('.header__inner').classList.remove('active');
                 document.querySelector('.header__menu-btn').classList.remove('active');
-                document.querySelector('html').classList.remove('overflow-hidden');
+
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (modal.id == item.dataset.micromodalTrigger) {
+                        MicroModal.show(modal.id);
+                    } else {
+                        MicroModal.close(modal.id);
+                    }
+                })
             })
-        })
-        document.querySelector('.modal__registration').addEventListener('click', function() {
-            MicroModal.close('modal-2');
-            MicroModal.show('modal-1');
-            document.querySelector('html').classList.add('overflow-hidden');
-        })
-        document.querySelector('.modal__sign').addEventListener('click', function() {
-            MicroModal.close('modal-1');
-            MicroModal.show('modal-2');
-            document.querySelector('html').classList.add('overflow-hidden');
         })
 
         MicroModal.init({
@@ -169,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initScrollToBlock() {
-        document.querySelectorAll('a[href^="#"').forEach(link => {
+        document.querySelectorAll('.anchor').forEach(link => {
 
             link.addEventListener('click', function(e) {
                 e.preventDefault();

@@ -20,11 +20,11 @@
         </a>
         <nav class="header__navigation navigation">
             <ul>
-                <li><a href="#why">Почему выбирают нас</a></li>
-                <li><a href="#partners">Наши партнёры</a></li>
-                <li><a href="#benefits">Работа с нами</a></li>
-                <li><a href="#providers">Провайдеры</a></li>
-                <li><a href="#info">Демо важны</a></li>
+                <li><a class="anchor" href="#why">Почему выбирают нас</a></li>
+                <li><a class="anchor" href="#partners">Наши партнёры</a></li>
+                <li><a class="anchor" href="#benefits">Работа с нами</a></li>
+                <li><a class="anchor" href="#providers">Провайдеры</a></li>
+                <li><a class="anchor" href="#info">Демо важны</a></li>
             </ul>
             <div class="header__mob-foot">
                 <div class="header__login">
@@ -32,8 +32,8 @@
                         <img src="images/dist/profile-icon.svg" alt="Login">
                     </div>
                     <div class="header__login-links">
-                        <a href="#" data-micromodal-trigger="modal-2">Вход</a>
-                        <a href="#" data-micromodal-trigger="modal-1">Регистрация</a>
+                        <button data-micromodal-trigger="modal-2">Вход</button>
+                        <button data-micromodal-trigger="modal-1">Регистрация</button>
                     </div>
                 </div>
                 <a class="header__bonus" href="#">
@@ -48,8 +48,8 @@
                     <img src="images/dist/profile-icon.svg" alt="Login">
                 </div>
                 <div class="header__login-links">
-                    <a href="#" data-micromodal-trigger="modal-2">Вход</a>
-                    <a href="#" data-micromodal-trigger="modal-1">Регистрация</a>
+                    <button data-micromodal-trigger="modal-2">Вход</button>
+                    <button data-micromodal-trigger="modal-1">Регистрация</button>
                 </div>
             </div>
             <a class="header__bonus" href="#">
@@ -577,7 +577,7 @@
 		  <div class="modal__container" role="dialog" aria-modal="true" >
 			<button class="modal__close" aria-label="Close modal" data-micromodal-close>
 				<svg data-micromodal-close width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M11.1047 10.0008L19.7709 1.33447C20.0761 1.02935 20.0761 0.534663 19.7709 0.229585C19.4658 -0.0754924 18.9711 -0.0755315 18.6661 0.229585L9.99975 8.8959L1.33347 0.229585C1.02836 -0.0755315 0.533671 -0.0755315 0.228593 0.229585C-0.0764842 0.534702 -0.0765233 1.02939 0.228593 1.33447L8.89487 10.0007L0.228593 18.6671C-0.0765233 18.9722 -0.0765233 19.4669 0.228593 19.7719C0.381132 19.9245 0.581093 20.0007 0.781053 20.0007C0.981014 20.0007 1.18094 19.9245 1.33351 19.7719L9.99975 11.1057L18.666 19.7719C18.8186 19.9245 19.0185 20.0007 19.2185 20.0007C19.4184 20.0007 19.6184 19.9245 19.7709 19.7719C20.0761 19.4668 20.0761 18.9721 19.7709 18.6671L11.1047 10.0008Z" fill="white"/>
+					<path data-micromodal-close d="M11.1047 10.0008L19.7709 1.33447C20.0761 1.02935 20.0761 0.534663 19.7709 0.229585C19.4658 -0.0754924 18.9711 -0.0755315 18.6661 0.229585L9.99975 8.8959L1.33347 0.229585C1.02836 -0.0755315 0.533671 -0.0755315 0.228593 0.229585C-0.0764842 0.534702 -0.0765233 1.02939 0.228593 1.33447L8.89487 10.0007L0.228593 18.6671C-0.0765233 18.9722 -0.0765233 19.4669 0.228593 19.7719C0.381132 19.9245 0.581093 20.0007 0.781053 20.0007C0.981014 20.0007 1.18094 19.9245 1.33351 19.7719L9.99975 11.1057L18.666 19.7719C18.8186 19.9245 19.0185 20.0007 19.2185 20.0007C19.4184 20.0007 19.6184 19.9245 19.7709 19.7719C20.0761 19.4668 20.0761 18.9721 19.7709 18.6671L11.1047 10.0008Z" fill="white"/>
 				</svg>
 			</button>
 			<div class="modal__content modal__wrapper">
@@ -621,7 +621,7 @@
 					</form>
 					<div class="modal__foot">
 						<span>Уже есть аккаунт?</span>
-						<a href="#" class="modal__sign">Войти</a>
+						<a href="#" class="modal__sign" data-micromodal-trigger="modal-2">Войти</a>
 					</div>
 				</div>
 			</div>
@@ -633,7 +633,7 @@
 		  <div class="modal__container" role="dialog" aria-modal="true">
 			<button class="modal__close" aria-label="Close modal" data-micromodal-close>
 				<svg data-micromodal-close width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M11.1047 10.0008L19.7709 1.33447C20.0761 1.02935 20.0761 0.534663 19.7709 0.229585C19.4658 -0.0754924 18.9711 -0.0755315 18.6661 0.229585L9.99975 8.8959L1.33347 0.229585C1.02836 -0.0755315 0.533671 -0.0755315 0.228593 0.229585C-0.0764842 0.534702 -0.0765233 1.02939 0.228593 1.33447L8.89487 10.0007L0.228593 18.6671C-0.0765233 18.9722 -0.0765233 19.4669 0.228593 19.7719C0.381132 19.9245 0.581093 20.0007 0.781053 20.0007C0.981014 20.0007 1.18094 19.9245 1.33351 19.7719L9.99975 11.1057L18.666 19.7719C18.8186 19.9245 19.0185 20.0007 19.2185 20.0007C19.4184 20.0007 19.6184 19.9245 19.7709 19.7719C20.0761 19.4668 20.0761 18.9721 19.7709 18.6671L11.1047 10.0008Z" fill="white"/>
+					<path data-micromodal-close d="M11.1047 10.0008L19.7709 1.33447C20.0761 1.02935 20.0761 0.534663 19.7709 0.229585C19.4658 -0.0754924 18.9711 -0.0755315 18.6661 0.229585L9.99975 8.8959L1.33347 0.229585C1.02836 -0.0755315 0.533671 -0.0755315 0.228593 0.229585C-0.0764842 0.534702 -0.0765233 1.02939 0.228593 1.33447L8.89487 10.0007L0.228593 18.6671C-0.0765233 18.9722 -0.0765233 19.4669 0.228593 19.7719C0.381132 19.9245 0.581093 20.0007 0.781053 20.0007C0.981014 20.0007 1.18094 19.9245 1.33351 19.7719L9.99975 11.1057L18.666 19.7719C18.8186 19.9245 19.0185 20.0007 19.2185 20.0007C19.4184 20.0007 19.6184 19.9245 19.7709 19.7719C20.0761 19.4668 20.0761 18.9721 19.7709 18.6671L11.1047 10.0008Z" fill="white"/>
 				</svg>
 			</button>
 			<div class="modal__content modal__wrapper">
@@ -653,7 +653,7 @@
 					</form>
 					<div class="modal__foot">
 						<span>Нет аккаунта?</span>
-						<a href="#" class="modal__registration">Регистрация</a>
+						<a href="#" class="modal__registration" data-micromodal-trigger="modal-1">Регистрация</a>
 					</div>
 				</div>
 			</div>

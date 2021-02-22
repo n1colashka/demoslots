@@ -103,15 +103,21 @@
 
     &__login-links {
 
-        a {
+        button {
             display: block;
             font-family: $pfdin-light;
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
             position: relative;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            padding-left: 0;
+            padding-right: 0;
             padding-bottom: 4px;
             margin-bottom: 2px;
+            outline: none;
             transition: .3s ease;
 
             &::after {
