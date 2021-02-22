@@ -9,7 +9,7 @@
     .form__item input:hover {
         border-color: $accent;
     }
-    .header__login-links button:hover {
+    .header__login-links a:hover {
         text-shadow: 0 0 .9px $accent, 0 0 .9px $accent, 0 0 .9px $accent;
         color: $accent;
         &::after {
